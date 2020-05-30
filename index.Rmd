@@ -1,9 +1,7 @@
 --- 
 title: "Happy Git and GitHub for the useR"
-author: "Jenny Bryan and the STAT 545 TAs"
-date: "`r Sys.Date()`"
+author: "Jenny Bryan, the STAT 545 TAs, Jim Hester"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -11,41 +9,36 @@ link-citations: yes
 github-repo: jennybc/happy-git-with-r
 description: "Using Git and GitHub with R, Rstudio, and R Markdown"
 twitter-handle: jennybryan
+url: 'https\://happygitwithr.com/'
+cover-image: img/watch-me-diff-watch-me-rebase-smaller.png
 ---
 
-# A work in progress {-}
+# Let's Git started {-}
 
-<img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />  
+<div class="figure">
+<img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />
+<p class="caption">Still from <a href="https://www.youtube.com/watch?v=uBWrpVrazzA">Heaven King video</a></p>
+</div>
 
-Still from [Heaven King video](https://www.youtube.com/watch?v=uBWrpVrazzA)
+Happy Git provides opinionated instructions on how to:
 
-What is already here:
+  * Install Git and get it working smoothly with GitHub, in the shell and in the [RStudio IDE](https://www.rstudio.com/products/rstudio/).
+  * Develop a few key workflows that cover your most common tasks.
+  * Integrate Git and GitHub into your daily work with R and [R Markdown](https://rmarkdown.rstudio.com).
+  
+The target reader is someone who uses R for data analysis or who works on R packages, although some of the content may be useful to those working in adjacent areas.
 
-  * Instructions for Git/GitHub/R/RStudio set-up and early usage.
-  * Prompts for workshop activites.
+The first two parts, [Installation](#install-intro) and [Connect Git, GitHub, RStudio](#connect-intro), provide a "batteries included" quick start to verify your setup.
 
-What is coming:
+In [Early GitHub Wins](#usage-intro), we rack up some early success with the basic workflows that are necessary to get your work onto GitHub. We also show the special synergy between R/R Markdown/RStudio and GitHub, which provides a powerful demonstration of why all this setup is worthwhile.
 
-  * More on Git itself, though will mostly rely on rest of the internet for that. I want to add / borrow / link to visual explanations.
-  * Workflows and policies for individuals and groups.
-    - How often should I commit? Which files should I commit?
-    - Data files and the dilemmas they present.
-    - Most common Git predicaments. How to avoid and recover.
-    - Clone vs fork.
-    - Purpose of branches, [issues](https://guides.github.com/features/issues/), [pull requests](https://help.github.com/articles/using-pull-requests/), tags.
-    - Add-as-collaborator vs "fork and pull".
-  * Use of the GitHub API for bulk operations.
-  * Using GitHub to run a course.
-    - Get an Organization.
-    - Use of Teams, repos, issues, pushing content into repos.
+The use of Git/GitHub in data science has a slightly different vibe from that of pure software develoment, due to differences in the user's context and objective. Happy Git aims to complement existing, general Git resources by highlighting the most rewarding usage patterns for data science. This perspective on the Git landscape is presented in [Basic Git Concepts](#git-intro) and [Daily Workflows](#workflows-intro). 
 
-Repo that makes this site: <https://github.com/jennybc/happy-git-with-r>
-
-Slides I draw on in live workshops: <https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user>
+## License {-}
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Happy Git and GitHub for the useR</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/jennybc/happy-git-with-r" property="cc:attributionName" rel="cc:attributionURL">Jennifer Bryan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-```{r include=FALSE}
+```{r include = FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
